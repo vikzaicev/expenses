@@ -1,0 +1,20 @@
+.box {
+    padding: 5px 5px;
+    margin: 10px 0;
+    border: 1px solid #003cc5;
+    border-radius: 10px;
+    background-color: #9a85a4;
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.select {
+    width: 100px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
