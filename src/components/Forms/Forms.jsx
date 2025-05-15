@@ -30,6 +30,11 @@ export const Forms = (props) => {
         setInputSum('')
         setInputDate('')
     }
+    const btnHandler = () => {
+        setInputName('')
+        setInputSum('')
+        setInputDate('')
+    }
 
     return (
         <form className={styles.form} onSubmit={formHandler}>
@@ -45,7 +50,9 @@ export const Forms = (props) => {
                 <input className={styles.input} onChange={dateInputHandler} value={inputDate} type="date" placeholder="Дата" />
                 <label className={styles.label} >Дата</label>
             </div>
-            <button className={styles.btn} type="submit">Добавить расход</button>
+            <div className={styles.btn__block}>
+                <button className={styles.btn} type="submit">Добавить расход</button>
+                <button className={styles.btn} onClick={btnHandler} type="reset">Отмена</button></div>
         </form>
     )
 }
