@@ -23,4 +23,4 @@ function computerToPhone(numbers) {
     }
     console.log(res.join(''));
 }
-computerToPhone("94561")
+//computerToPhone("94561")
