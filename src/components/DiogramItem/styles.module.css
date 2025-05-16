@@ -1,0 +1,26 @@
+.mount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.block {
+    width: 20px;
+    height: 150px;
+    border: 1px solid #003cc5;
+    border-radius: 10px;
+    background-color: #8f769a;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.title {
+    color: #003cc5;
+}
+.block__fill {
+    width: 100%;
+    background-color: #3c154d;
+    transition: all 0.3s ease;
+}

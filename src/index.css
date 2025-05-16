@@ -4,7 +4,6 @@
   font-weight: 400;
   margin: 10px;
   box-sizing: border-box;
-
   color-scheme: light dark;
   color: rgba(81, 57, 57, 0.87);
   background-color: #f3dbdb;
@@ -17,9 +16,5 @@
 
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  /* min-width: 320px; */
   min-height: 100vh;
 }

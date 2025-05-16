@@ -1,4 +1,3 @@
-
 import { Diogramma } from "../Diogramma/Diogramma"
 import styles from "./styles.module.css"
 
@@ -14,7 +13,7 @@ export const Filter = (props) => {
                 <div className={styles.titli}>Выбор по году</div>
                 <div className={styles.filter}>
                     <form>
-                        <select className={styles.select} onChange={selectHandler} value={props.year} id="country" name="country">
+                        <select className={styles.select} onChange={selectHandler} value={props.year} >
                             <option value="2023">2023</option>
                             <option value="2024">2024</option>
                             <option value="2025">2025</option>
@@ -22,7 +21,7 @@ export const Filter = (props) => {
                     </form>
                 </div>
             </div>
-            <Diogramma />
+            <Diogramma data={props.data} />
         </div>
     )
 }
