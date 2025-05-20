@@ -7,16 +7,25 @@ import './Codewars'
 import { useState } from 'react'
 import { Footer } from './components/Footer/Footer'
 
-const DATA = []
+// localStorage.clear()
+let DATA = []
+const localStorageData = JSON.parse(localStorage.getItem('data'));
+if (localStorageData) {
+  DATA = [...localStorageData]
+}
 
 function App() {
   const [data, setData] = useState(DATA)
 
   const addDateHendler = (expense) => {
+
     setData((prevData) => {
+      localStorage.setItem('data', JSON.stringify([expense, ...prevData]));
       return [expense, ...prevData]
     })
   }
+
+
 
   return (
     <>

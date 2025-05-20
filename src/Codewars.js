@@ -24,3 +24,19 @@ function computerToPhone(numbers) {
     console.log(res.join(''));
 }
 //computerToPhone("94561")
+
+
+let alphabet = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split();
+
+function validateBase(num, base) {
+    const arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+    for (let char of num) {
+
+        if (arr.indexOf(char) >= base) {
+            return false
+        }
+    }
+    //return true
+}
+// validateBase('6124', 5)
