@@ -2,12 +2,12 @@
   font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  margin: 10px;
+  padding: 10px;
   box-sizing: border-box;
   color-scheme: light dark;
   color: rgba(81, 57, 57, 0.87);
   background-color: #f3dbdb;
-  /* background-image: linear-gradient(to right, #003cc5 0%, #0b63f6 51%, #003cc5 100%); */
+  background: url(./img/92903.jpg) no-repeat center/cover;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

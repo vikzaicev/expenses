@@ -28,7 +28,7 @@ export const Diogramma = (props) => {
             <div className={styles.box}>
                 <DiogrammaItem costs={arrMount} maxValueArr={maxValueArr} />
             </div>
-            <div className={styles.title}>Сумма расход за год {sumAll} тг</div>
+            <div className={styles.title}>Сумма расходов за год {sumAll} тг</div>
         </>
     )
 }

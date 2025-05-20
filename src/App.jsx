@@ -5,7 +5,6 @@ import { Cart } from './components/Cart/Cart'
 import 'normalize.css'
 import './Codewars'
 import { useState } from 'react'
-import { Footer } from './components/Footer/Footer'
 
 // localStorage.clear()
 let DATA = []
@@ -18,21 +17,17 @@ function App() {
   const [data, setData] = useState(DATA)
 
   const addDateHendler = (expense) => {
-
     setData((prevData) => {
       localStorage.setItem('data', JSON.stringify([expense, ...prevData]));
       return [expense, ...prevData]
     })
   }
 
-
-
   return (
     <>
       <Title />
       <Forms onAddDateHandler={addDateHendler} />
       <Cart data={data} />
-      <Footer />
     </>
   )
 }
