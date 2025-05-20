@@ -14,9 +14,14 @@ export const Filter = (props) => {
                 <div className={styles.filter}>
                     <form>
                         <select className={styles.select} onChange={selectHandler} value={props.year} >
-                            <option value="2023">2023</option>
+                            {props.allYearSet.map(year => {
+                                return (
+                                    <option key={year} value={year}>{year}</option>
+                                )
+                            })}
+                            {/* <option value="2023">2023</option>
                             <option value="2024">2024</option>
-                            <option value="2025">2025</option>
+                            <option value="2025">{props.currentYear}</option> */}
                         </select>
                     </form>
                 </div>
