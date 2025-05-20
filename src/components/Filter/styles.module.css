@@ -3,7 +3,8 @@
     margin: 10px 0;
     border: 1px solid #003cc5;
     border-radius: 10px;
-    background-color: #c7b1d1;
+    background-color: rgba(114, 164, 172, 0.8);
+    box-shadow: 0px 0px 5px #003cc5;
 }
 .top {
     display: flex;
