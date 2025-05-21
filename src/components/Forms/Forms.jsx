@@ -21,6 +21,15 @@ export const Forms = (props) => {
     }
     const formHandler = (e) => {
         e.preventDefault()
+
+        if (inputName.trim().length == 0) {
+            setInputName('')
+            setInputSum('')
+            setInputDate('')
+            setOpenForm(true)
+            return
+        }
+
         const expense = {
             name: inputName,
             sum: inputSum,
@@ -46,15 +55,15 @@ export const Forms = (props) => {
         <>
             {!openForm && <form className={styles.form} onSubmit={formHandler}>
                 <div className={styles.block}>
-                    <input className={styles.input} onChange={nameInputHandler} value={inputName} placeholder="Название" />
+                    <input className={styles.input} onChange={nameInputHandler} value={inputName} required="required" placeholder="Название" />
                     <label className={styles.label} >Название</label>
                 </div>
                 <div className={styles.block}>
-                    <input className={styles.input} onChange={sumInputHandler} value={inputSum} type="number" placeholder="Стоимость" />
+                    <input className={styles.input} onChange={sumInputHandler} value={inputSum} type="number" required="required" placeholder="Стоимость" />
                     <label className={styles.label} >Стоимость</label>
                 </div>
                 <div className={styles.block}>
-                    <input className={styles.input} onChange={dateInputHandler} value={inputDate} type="date" placeholder="Дата" />
+                    <input className={styles.input} onChange={dateInputHandler} value={inputDate} type="date" required="required" min="2023-01-01" max="2030-12-31" placeholder="Дата" />
                     <label className={styles.label} >Дата</label>
                 </div>
                 <div className={styles.btn__block}>
