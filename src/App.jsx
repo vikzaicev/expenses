@@ -6,7 +6,7 @@ import 'normalize.css'
 import './Codewars'
 import { useState } from 'react'
 
-// localStorage.clear()
+localStorage.clear()
 let DATA = []
 const localStorageData = JSON.parse(localStorage.getItem('data'));
 if (localStorageData) {

@@ -40,3 +40,35 @@ function validateBase(num, base) {
     //return true
 }
 // validateBase('6124', 5)
+
+function shiftLeft(s, t) {
+    let counter = 0
+    if (s.length > t.length) {
+        counter = s.length - t.length
+        s = s.slice(counter)
+    }
+    if (s.length < t.length) {
+        counter = t.length - s.length
+        t = t.slice(counter)
+    }
+    while (s != t) {
+        s = s.slice(1)
+        t = t.slice(1)
+        counter += 2
+    }
+    console.log(counter);
+}
+// shiftLeft("b", "ab")
+
+function encode(str) {
+    let alph = [0, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let res = []
+    for (let char of str) {
+        if (alph.indexOf(char.toLowerCase()) > 0) {
+            res.push(alph.indexOf(char.toLowerCase()))
+        }
+        else res.push(char)
+    }
+    console.log(res.join(""));
+}
+// encode("AbCD5")
